@@ -7,7 +7,7 @@ extends CharacterBody3D
 @onready var health_manager := $HealthManager
 @onready var anim_tree := $IcySkin/AnimationTree
 @onready var shoot_anchor := $IcySkin/%ShootAnchor
-@onready var current_controller := $TwoStickControllerAuto
+@onready var current_controller := $OneStickController
 @onready var interaction_area := $IcySkin/InteractionArea
 @onready var start_position := global_transform.origin
 

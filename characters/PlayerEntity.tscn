@@ -31,15 +31,15 @@ shape = SubResource("1")
 [node name="PositionResetter" type="Node" parent="."]
 script = ExtResource("14")
 
-[node name="TwoStickControllerAuto" parent="." instance=ExtResource("5_n2q7r")]
-
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(-0.707107, 0.298836, -0.640857, 0, 0.906308, 0.422618, 0.707107, 0.298836, -0.640857, 0, 0, 0)
 
 [node name="ThirdPersonCamera" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35)
+projection = 1
 current = true
 fov = 30.0
+size = 16.0
 
 [node name="IcySkin" parent="." instance=ExtResource("1")]
 
@@ -50,6 +50,8 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="IcySkin/InteractionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00531, 0.798733)
 shape = SubResource("SphereShape3D_q0x46")
+
+[node name="OneStickController" parent="." instance=ExtResource("2_njm8p")]
 
 [connection signal="damage" from="HealthManager" to="." method="on_hit"]
 [connection signal="health_depleted" from="HealthManager" to="." method="on_death"]
